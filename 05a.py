@@ -1,19 +1,6 @@
 def lines(lst, oldx, oldy, newx, newy):
     if oldx != newx and oldy != newy:
-        if oldx > newx:
-            tempx = oldx
-            oldx = newx
-            newx = tempx
-            tempy = oldy
-            oldy = newy
-            newy = tempy
-        count = 0
-        for i in range(oldx, newx+1):
-            lst[i][oldy+count] += 1
-            if oldy > newy:
-                count -= 1
-            else:
-                count += 1
+        return lst
     elif oldx == newx:
         if newy < oldy:
             temp = oldy
