@@ -8,7 +8,11 @@ def pattern(patternlst):
         if len(patternlst[i]) == 4:
             patlst[4] = patternlst[i]
         if len(patternlst[i]) == 7:
-            patlst[8] = patternlst[i] 
+            patlst[8] = patternlst[i]
+        if len(patternlst[i]) == 6 and (patlst[1][0] not in patternlst[i] or patlst[1][1] not in patternlst[i]):
+            patlst[6] = patternlst[i]
+        if len(patternlst[i]) == 5 and (patlst[1][0] in patternlst[i] and patlst[1][1] in patternlst[i]):
+            patlst[3] = patternlst[i]
     return patlst
 
 total = 0
