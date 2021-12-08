@@ -1,5 +1,15 @@
 def pattern(patternlst):
-    pass
+    patlst = ['']*10
+    for i in range(len(patternlst)):
+        if len(patternlst[i]) == 2:
+            patlst[1] = patternlst[i]
+        if len(patternlst[i]) == 3:
+            patlst[7] = patternlst[i]
+        if len(patternlst[i]) == 4:
+            patlst[4] = patternlst[i]
+        if len(patternlst[i]) == 7:
+            patlst[8] = patternlst[i] 
+    return patlst
 
 total = 0
 for i in range(200):
